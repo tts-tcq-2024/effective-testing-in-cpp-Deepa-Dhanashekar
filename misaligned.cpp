@@ -1,15 +1,19 @@
 #include <iostream>
-#include <assert.h>
+#include <sstream>
+#include <cassert>
+#include <string>
 
-int printColorMap() {
+int printColorMap(std::ostringstream& buffer) {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int i = 0, j = 0;
+    int i, j;
+
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            std::cout << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
+            buffer << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[i] << "\n";
         }
     }
+
     return i * j;
 }
 
@@ -24,5 +28,5 @@ int main() {
     
     std::cout << "All is well (maybe!)\n";
     
-    return 0 ;
+    return 0;
 }
