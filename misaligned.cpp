@@ -1,5 +1,7 @@
 #include <iostream>
-#include <assert.h>
+#include <sstream>
+#include <cassert>
+#include <string>
 
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
